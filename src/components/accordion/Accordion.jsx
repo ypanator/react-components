@@ -40,8 +40,10 @@ const Accordion = ({ datain, closeOthers }) => {
                         {el.isOpen ? "-" : "+"}
                     </button>
                 </div>
-                <div className={`element-body ${!el.isOpen && "hidden"}`}>
+                <div className={`expander ${el.isOpen && "expanded"}`}>
+                <div className="element-body">
                     {el.text}
+                </div>
                 </div>
             </div>
         );
